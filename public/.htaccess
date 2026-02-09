@@ -1,0 +1,16 @@
+# Tea Amo SPA – Apache rewrite for React Router deep links
+# Upload this with your build (it lives in public/ and is copied to dist-vps by Vite).
+# Place the contents of dist-vps (including this .htaccess) into /public_html.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Serve real files and directories as-is (e.g. /assets/*, /favicon.ico, /tea-amo-og.jpg).
+  # -f = file exists, -d = directory exists.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Send all other requests to index.html so React Router can handle /menu, /locations, etc.
+  # L = last rule, stop processing after this rewrite.
+  RewriteRule . /index.html [L]
+</IfModule>

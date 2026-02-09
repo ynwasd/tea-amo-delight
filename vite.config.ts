@@ -5,7 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // VPS root: npm run build (base /). GitHub Pages: npm run build:gh-pages (base /tea-amo-delight/)
+  // VPS at root (e.g. teaamosanmarcos.com): npm run build → base "/" (works with .htaccess SPA rewrites).
+  // GitHub Pages: npm run build:gh-pages → base "/tea-amo-delight/".
   base: process.env.VITE_BASE ?? "/",
   build: {
     // Allow different output folders via VITE_OUT_DIR (e.g. dist-vps, dist-gh-pages)
