@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 24% 96%;
+    --foreground: 90 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 90 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 90 20% 15%;
+
+    --primary: 88 75% 28%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 58 42% 86%;
+    --secondary-foreground: 90 20% 15%;
+
+    --muted: 58 30% 92%;
+    --muted-foreground: 90 10% 40%;
+
+    --accent: 88 60% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 58 20% 85%;
+    --input: 58 20% 85%;
+    --ring: 88 75% 28%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 88 75% 28%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 58 42% 86%;
+    --sidebar-accent-foreground: 90 20% 15%;
+    --sidebar-border: 58 20% 85%;
+    --sidebar-ring: 88 75% 28%;
+
+    /* Custom tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(88 75% 28%), hsl(88 60% 40%));
+    --cream: 58 42% 86%;
+    --cream-dark: 58 30% 75%;
+    --green-light: 88 50% 92%;
+    --green-glow: 88 60% 40%;
+
+    /* Typography */
+    --font-display: 'Fredoka', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+
+    /* Shadows */
+    --shadow-card: 0 4px 20px -4px hsl(88 75% 28% / 0.1);
+    --shadow-card-hover: 0 8px 30px -4px hsl(88 75% 28% / 0.2);
+    --shadow-button: 0 4px 14px -2px hsl(88 75% 28% / 0.3);
+  }
+
+  .dark {
+    --background: 90 20% 8%;
+    --foreground: 58 42% 90%;
+    --card: 90 20% 12%;
+    --card-foreground: 58 42% 90%;
+    --popover: 90 20% 12%;
+    --popover-foreground: 58 42% 90%;
+    --primary: 88 60% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 58 20% 20%;
+    --secondary-foreground: 58 42% 90%;
+    --muted: 90 15% 18%;
+    --muted-foreground: 58 20% 60%;
+    --accent: 88 50% 35%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 90 15% 20%;
+    --input: 90 15% 20%;
+    --ring: 88 60% 40%;
+    --sidebar-background: 90 20% 10%;
+    --sidebar-foreground: 58 42% 90%;
+    --sidebar-primary: 88 60% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 90 15% 18%;
+    --sidebar-accent-foreground: 58 42% 90%;
+    --sidebar-border: 90 15% 20%;
+    --sidebar-ring: 88 60% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--hero-gradient);
+  }
+
+  .bg-hero-gradient {
+    background-image: var(--hero-gradient);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .shadow-button {
+    box-shadow: var(--shadow-button);
+  }
+}
