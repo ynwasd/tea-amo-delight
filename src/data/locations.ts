@@ -20,7 +20,7 @@ export const locations: Location[] = [
     state: "CA",
     zip: "92078",
     phone: "(760) 290-3189",
-    hours: "Mon–Sat 11am–9pm · Sun 12pm–8pm",
+    hours: "Mon–Thu 11:30am–9pm · Fri 11:30am–9:30pm · Sat–Sun 10:30am–9:30pm",
     mapUrl: "https://maps.google.com/?q=727+W+San+Marcos+Blvd+%23108+San+Marcos+CA+92078",
     orderLinks: [
       { platform: "DoorDash", url: "#" },

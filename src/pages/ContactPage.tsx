@@ -57,7 +57,7 @@ const ContactPage = () => {
                 </div>
                 <div className="bg-muted rounded-2xl p-4">
                   <p className="text-xs text-muted-foreground font-body">
-                    <strong>Hours:</strong> Mon–Sat 11am–9pm · Sun 12pm–8pm
+                    <strong>Hours:</strong> Mon–Thu 11:30am–9pm · Fri 11:30am–9:30pm · Sat–Sun 10:30am–9:30pm
                   </p>
                 </div>
               </div>
